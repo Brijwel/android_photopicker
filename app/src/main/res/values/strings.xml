@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Photo picker</string>
+    <string name="single_selection">Single Selection</string>
+    <string name="multiple_selection">Multiple Selection</string>
+    <string name="both">Both</string>
+    <string name="video">Video</string>
+    <string name="image">Image</string>
+</resources>

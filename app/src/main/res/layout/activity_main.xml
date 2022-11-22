@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvGallery"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:layout_constraintBottom_toTopOf="@+id/buttonGroup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:spanCount="3" />
+
+    <RadioGroup
+        android:id="@+id/buttonGroup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/pickMultiple"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:singleSelection="true">
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/imageOnly"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/ic_image_only"
+            android:checked="true"
+            android:gravity="center"
+            android:paddingHorizontal="10dp"
+            android:text="@string/image" />
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/videoOnly"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/ic_video_only"
+            android:gravity="center"
+            android:paddingHorizontal="10dp"
+            android:text="@string/video" />
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/bothImageAndVideo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/movie_image_icon"
+            android:gravity="center"
+            android:paddingHorizontal="10dp"
+            android:text="@string/both" />
+    </RadioGroup>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/pickSingle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/single_selection"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/pickMultiple"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/pickMultiple"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/multiple_selection"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/pickSingle" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
